@@ -8,6 +8,7 @@ import Cart from '../Cart/Cart';
 const Body = () => {
     const [details, setDetails] = useState([]);
     const [read, setRead] = useState([])
+    
 
     useEffect(()=>{
         fetch('details.json')
@@ -19,6 +20,7 @@ const Body = () => {
         const newRead = [...read, detail];
         setRead(newRead);
     }
+    
     return (
         <div className='flex '>
             <div className="main">
@@ -27,12 +29,13 @@ const Body = () => {
                 key={detail.id}
                 detail ={detail}
                 handleRead={handleRead}
-                ></Detail>
+               ></Detail>
                  )
               }
             </div>
             <div className="shadow-lg rounded w-2/4 ms-5 px-5 ">
             <Cart read={read}></Cart>
+            
                </div>
         </div>
     );

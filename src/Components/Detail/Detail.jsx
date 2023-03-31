@@ -8,6 +8,7 @@ const Detail = (props) => {
     const {author, title,cover} = props.detail;
 
      const handleRead = props.handleRead;
+     const handleTotal = props.handleTotal;
 
     return (
          <div className='ms-5 rounded-lg'>
@@ -29,7 +30,7 @@ const Detail = (props) => {
           <div>
           <p>#beginners  #programming</p>
           <div className='py-5'>
-          <button class="btn btn-primary">Mark as read</button>
+          <button className="btn btn-primary">Mark as read</button>
           </div>
         
             
