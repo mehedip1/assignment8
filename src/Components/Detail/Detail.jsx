@@ -6,8 +6,11 @@ import logo from '../images/logo.jpg';
 
 const Detail = (props) => {
     const {author, title,cover} = props.detail;
+
+     const handleRead = props.handleRead;
+
     return (
-         <div className='ms-5'>
+         <div className='ms-5 rounded-lg'>
             <div className="card w-100 bg-base-100 shadow-xl">
         <figure><img src={cover} alt="" /></figure>
         <div className="card-body ">
@@ -18,13 +21,17 @@ const Detail = (props) => {
          <h2>{author}</h2>
          <p>Mar 14 (4 Days ago)</p>
          </div>
-         <p>05 min read <small><FontAwesomeIcon icon={faBookmark} /></small>
+         <p>05 min read <small onClick={()=> handleRead(props.detail)}><FontAwesomeIcon icon={faBookmark} /></small>
           </p>
           </div>
           
           <p>{title}</p>
           <div>
           <p>#beginners  #programming</p>
+          <div className='py-5'>
+          <button class="btn btn-primary">Mark as read</button>
+          </div>
+        
             
           </div>
         </div>
