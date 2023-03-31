@@ -3,6 +3,7 @@ import { useEffect ,useState } from 'react';
 import Detail from '../Detail/Detail';
 
 
+
 const Body = () => {
     const [details, setDetails] = useState([])
 
@@ -12,17 +13,19 @@ const Body = () => {
         .then(data => setDetails(data))
     },[])
     return (
-        <div className='grid grid-cols-2	'>
-            <div className="main row-span-2">
+        <div className='flex '>
+            <div className="main">
               {
                 details.map( detail => <Detail
                 key={detail.id}
                 detail ={detail}
-                ></Detail> )
+                ></Detail>
+                 )
               }
             </div>
-            <div className="blog-box">
-               <h1>About</h1>
+            <div className="shadow-lg w-2/4 ms-5 px-5 ">
+               <h1>Bookmarked Blogs : 8</h1>
+               <h1>Hello</h1>
             </div>
         </div>
     );
