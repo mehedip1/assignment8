@@ -1,31 +1,34 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
+import logo from '../images/logo.jpg';
 
 
 const Detail = (props) => {
-    const {author, title,cover,img} = props.detail;
+    const {author, title,cover} = props.detail;
     return (
          <div className='ms-5'>
             <div className="card w-100 bg-base-100 shadow-xl">
         <figure><img src={cover} alt="" /></figure>
-        <div className="card-body">
-        {/* author about */}
-        <h2>{author}</h2>
+        <div className="card-body ">
+        {/* about author */}
         <div className='flex'>
-        <p>Mar 14 (4 Days ago)</p>
-          <div>
-            <p>05 min read</p>
-           </div>
-           <p className='ms-5 px-5'><FontAwesomeIcon icon={faBookmark} /></p>
-        </div>
+         <img className='w-10 rounded-full' src={logo} alt="" />
+         <div className='w-3/4 ms-5'>
+         <h2>{author}</h2>
+         <p>Mar 14 (4 Days ago)</p>
+         </div>
+         <p>05 min read <small><FontAwesomeIcon icon={faBookmark} /></small>
+          </p>
+          </div>
           
           <p>{title}</p>
-          <div className="card-actions justify-end">
+          <div>
+          <p>#beginners  #programming</p>
             
           </div>
         </div>
-      </div>
+        </div>
          </div>
         
         
