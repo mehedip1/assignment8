@@ -7,7 +7,9 @@ import Cart from '../Cart/Cart';
 
 const Body = () => {
     const [details, setDetails] = useState([]);
-    const [read, setRead] = useState([])
+    const [read, setRead] = useState([]);
+    
+
     
 
     useEffect(()=>{
@@ -16,10 +18,14 @@ const Body = () => {
         .then(data => setDetails(data))
     },[]);
 
+    
+
     const handleRead = (detail) =>{
         const newRead = [...read, detail];
         setRead(newRead);
+        
     }
+   
     
     return (
         <div className='flex '>
@@ -29,6 +35,7 @@ const Body = () => {
                 key={detail.id}
                 detail ={detail}
                 handleRead={handleRead}
+               
                ></Detail>
                  )
               }

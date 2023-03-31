@@ -8,11 +8,12 @@ const Detail = (props) => {
     const {author, title,cover} = props.detail;
 
      const handleRead = props.handleRead;
-     const handleTotal = props.handleTotal;
+     
+   
 
     return (
          <div className='ms-5 rounded-lg'>
-            <div className="card w-100 bg-base-100 shadow-xl">
+        <div className="card w-100 bg-base-100 shadow-xl">
         <figure><img src={cover} alt="" /></figure>
         <div className="card-body ">
         {/* about author */}

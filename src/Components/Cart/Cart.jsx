@@ -4,6 +4,7 @@ import React from 'react';
 const Cart = (props) => {
     const {read} = props;
     
+    
     return (
         <div>
             <div>
