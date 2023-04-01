@@ -9,7 +9,7 @@ const Detail = (props) => {
       const handleRead = props.handleRead;
      
       
-      const hendleAddToBook = (detail) => {
+ const hendleAddToBook = (detail) => {
         console.log(detail);
       }
   
