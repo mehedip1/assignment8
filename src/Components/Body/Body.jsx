@@ -5,6 +5,7 @@ import Cart from '../Cart/Cart';
 
 
 
+
 const Body = () => {
     const [details, setDetails] = useState([]);
     const [read, setRead] = useState([]);
@@ -35,6 +36,7 @@ const Body = () => {
                 key={detail.id}
                 detail ={detail}
                 handleRead={handleRead}
+                
                
                ></Detail>
                  )
@@ -42,6 +44,7 @@ const Body = () => {
             </div>
             <div className="shadow-lg rounded w-2/4 ms-5 px-5 ">
             <Cart read={read}></Cart>
+          
             
                </div>
         </div>
