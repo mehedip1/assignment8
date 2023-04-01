@@ -7,10 +7,13 @@ import logo from '../images/logo.jpg';
 const Detail = (props) => {
     const {author, title,cover} = props.detail;
       const handleRead = props.handleRead;
+     
       
-
-    
-
+      const hendleAddToBook = (detail) => {
+        console.log(detail);
+      }
+  
+   
      
    
 
@@ -27,7 +30,7 @@ const Detail = (props) => {
          <p>Mar 14 (4 Days ago)</p>
         
          </div>
-         <p>05 min read <small onClick={()=> handleRead(props.detail)}><FontAwesomeIcon icon={faBookmark} /></small>
+         <p>05 min read <small onClick={()=> hendleAddToBook(props.detail)} ><FontAwesomeIcon icon={faBookmark} /></small>
           </p>
           </div>
           
@@ -35,7 +38,7 @@ const Detail = (props) => {
           <div>
           <p>#beginners  #programming</p>
           <div className='py-5'>
-          <button  className="btn btn-primary">Mark as read</button>
+          <button onClick={()=> handleRead(props.detail)} className="btn btn-primary">Mark as read</button>
           </div>
         
             

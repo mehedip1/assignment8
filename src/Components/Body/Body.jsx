@@ -20,12 +20,12 @@ const Body = () => {
     },[]);
 
     
-
     const handleRead = (detail) =>{
         const newRead = [...read, detail];
         setRead(newRead);
         
     }
+   
    
     
     return (
@@ -36,14 +36,12 @@ const Body = () => {
                 key={detail.id}
                 detail ={detail}
                 handleRead={handleRead}
-                
-               
-               ></Detail>
+                 ></Detail>
                  )
               }
             </div>
             <div className="shadow-lg rounded w-2/4 ms-5 px-5 ">
-            <Cart read={read}></Cart>
+            <Cart read={(read)}></Cart>
           
             
                </div>
